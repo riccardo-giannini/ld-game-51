@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1"
-     inkscape:cx="229"
-     inkscape:cy="230.5"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="321.11487"
+     inkscape:cy="213.10431"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -1253,7 +1253,10 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="M 61.208394,78.800729 47.788808,75.204962 57.612627,65.381143 Z"
-       transform="rotate(-15,10.215909,52.728234)" />
+       transform="rotate(-15,10.215909,52.728234)"
+       inkscape:export-filename="./teleport_triangle.png"
+       inkscape:export-xdpi="142.66"
+       inkscape:export-ydpi="142.66" />
     <path
        sodipodi:type="star"
        style="fill:#3d5467;fill-opacity:1;stroke:#1b252e;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
@@ -1269,7 +1272,10 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 61.208394,78.800729 -11.343569,0 0,-11.343569 11.343569,0 z"
-       transform="rotate(-45,60.846433,70.064302)" />
+       transform="rotate(-45,60.846433,70.064302)"
+       inkscape:export-filename="./teleport_square.png"
+       inkscape:export-xdpi="142.66"
+       inkscape:export-ydpi="142.66" />
     <path
        sodipodi:type="star"
        style="fill:#3d5467;fill-opacity:1;stroke:#1b252e;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
@@ -1285,7 +1291,10 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 61.208394,78.800729 -9.313294,1.475081 -4.280851,-8.401644 6.667582,-6.667583 8.401644,4.280852 z"
-       transform="rotate(-26.946639,99.145544,74.963508)" />
+       transform="rotate(-26.946639,99.145544,74.963508)"
+       inkscape:export-filename="./teleport_pentagon.png"
+       inkscape:export-xdpi="142.66"
+       inkscape:export-ydpi="142.66" />
     <path
        sodipodi:type="star"
        style="fill:#3d5467;fill-opacity:1;stroke:#1b252e;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
@@ -1301,7 +1310,10 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 61.208394,78.800729 -7.747801,2.076017 -5.671785,-5.671784 2.076017,-7.747802 7.747802,-2.076017 5.671784,5.671784 z"
-       transform="rotate(14.692721,-84.731131,105.8886)" />
+       transform="rotate(14.692721,-84.731131,105.8886)"
+       inkscape:export-filename="./teleport_hexagon.png"
+       inkscape:export-xdpi="142.66"
+       inkscape:export-ydpi="142.66" />
     <path
        sodipodi:type="star"
        style="fill:#3d5467;fill-opacity:1;stroke:#1b252e;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
@@ -1317,12 +1329,15 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 61.208394,78.800729 -4.784522,-0.06983 -4.528772,1.544911 -1.412087,-4.57193 -2.868764,-3.829714 3.911804,-2.755779 2.755778,-3.911804 3.829715,2.868765 4.571929,1.412087 -1.544911,4.528772 z"
-       transform="rotate(9.0704109,-288.49514,123.60019)" />
+       transform="rotate(9.0704109,-288.49514,123.60019)"
+       inkscape:export-filename="./teleport_star.png"
+       inkscape:export-xdpi="142.66"
+       inkscape:export-ydpi="142.66" />
     <g
        id="g32080"
        inkscape:export-filename="box.png"
-       inkscape:export-xdpi="177.38"
-       inkscape:export-ydpi="177.38">
+       inkscape:export-xdpi="133.03"
+       inkscape:export-ydpi="133.03">
       <g
          id="g28567">
         <path
@@ -1365,7 +1380,10 @@
       </g>
     </g>
     <g
-       id="g32085">
+       id="g32085"
+       inkscape:export-filename="./button_unpressed.png"
+       inkscape:export-xdpi="132.52"
+       inkscape:export-ydpi="132.52">
       <path
          style="fill:#b2e7c8;fill-opacity:1;stroke:#7ca08b;stroke-width:0.189305px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 105.00445,55.884601 h 10.10513 a 1.8520833,1.8520833 45 0 1 1.85208,1.852083 v 6.925369 a 1.8520833,1.8520833 135 0 1 -1.85208,1.852083 h -10.10513 a 1.8520833,1.8520833 45 0 1 -1.85208,-1.852083 v -6.925369 a 1.8520833,1.8520833 135 0 1 1.85208,-1.852083 z"
@@ -1446,7 +1464,10 @@
     </g>
     <g
        id="g32090"
-       transform="translate(-17.288027)">
+       transform="translate(-17.288027)"
+       inkscape:export-filename="./button_pressed.png"
+       inkscape:export-xdpi="142.66"
+       inkscape:export-ydpi="142.66">
       <path
          style="fill:#b2e7c8;fill-opacity:1;stroke:#7ca08b;stroke-width:0.189305px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 139.20006,55.884601 h 10.10513 a 1.8520833,1.8520833 45 0 1 1.85208,1.852083 v 6.925369 a 1.8520833,1.8520833 135 0 1 -1.85208,1.852083 h -10.10513 a 1.8520833,1.8520833 45 0 1 -1.85208,-1.852083 v -6.925369 a 1.8520833,1.8520833 135 0 1 1.85208,-1.852083 z"
