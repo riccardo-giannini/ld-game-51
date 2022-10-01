@@ -5,7 +5,8 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 24 )
 
-[node name="Box" type="StaticBody2D" groups=["pushable"]]
+[node name="Box" type="RigidBody2D" groups=["pushable"]]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
