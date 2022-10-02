@@ -15,8 +15,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-#	get_parent().get_node("Player/PanelContainer/Time").text = "[b]" + str(time_left) + "[/b]"
+func _process(_delta):
 	get_parent().get_node("CanvasLayer/PanelContainer/Label").text = str(time_left)
 	pass
 

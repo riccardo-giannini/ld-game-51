@@ -10,7 +10,7 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	if Input.is_key_pressed(KEY_ALT):
 		if Input.is_key_pressed(KEY_ENTER):
 			OS.window_fullscreen = !OS.window_fullscreen
