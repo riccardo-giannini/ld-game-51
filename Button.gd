@@ -24,11 +24,11 @@ func deactivate():
 	sprite.texture = unpressed
 
 
-func _on_Button_body_entered(body):
+func _on_Button_body_entered(_body):
 	activate()
 	pass # Replace with function body.
 
 
-func _on_Button_body_exited(body):
+func _on_Button_body_exited(_body):
 	deactivate()
 	pass # Replace with function body.

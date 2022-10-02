@@ -8,8 +8,9 @@ var inputs = {"player_right": Vector2.RIGHT,
 			"player_down": Vector2.DOWN}
 
 func _ready():
-	position = position.snapped(Vector2.ONE * tile_size)
-	position += Vector2.ONE * tile_size/2
+#	position = position.snapped(Vector2.ONE * tile_size)
+#	position += Vector2.ONE * tile_size/2
+	pass
 
 func _process(_delta):
 	if tween.is_active():
@@ -17,14 +18,15 @@ func _process(_delta):
 	for dir in inputs.keys():
 		if Input.is_action_pressed(dir):
 			move(dir)
-		push_box(dir)
-	
 			
 onready var ray = $RayCast2D
 
-onready var box_being_pushed = null
-onready var box_being_pushed_destination = null
-onready var box_can_be_pushed = true
+onready var initial_position = position
+
+func global_reset():
+	tween.stop_all()
+	position = initial_position
+	print(ray.get_collider())
 
 func win():
 	print('congratulations, you won')
@@ -33,28 +35,13 @@ func move(dir):
 	ray.cast_to = inputs[dir] * tile_size
 	ray.force_raycast_update()
 	var collider = ray.get_collider()
+	print(collider)
 	if collider != null:
-		if collider.is_in_group('pushable'):
-			box_being_pushed = collider
-			if box_can_be_pushed:
-				box_being_pushed_destination = box_being_pushed.position + (inputs[dir] * tile_size)
-			box_can_be_pushed = false
+		if collider.has_method('being_pushed'):
+			collider.being_pushed(inputs[dir], tile_size)
 	if !ray.is_colliding():
 		move_tween(dir)
 		
-func push_box(dir):
-	if box_being_pushed:
-		var box_ray = box_being_pushed.get_node("RayCast2D")
-		box_ray.cast_to = inputs[dir] * tile_size
-		box_ray.force_raycast_update()
-		if !box_ray.is_colliding():
-			box_being_pushed.position = lerp(box_being_pushed.position, box_being_pushed_destination, 1)
-		if box_being_pushed.position.is_equal_approx(box_being_pushed_destination) || box_ray.is_colliding():
-			box_being_pushed_destination = null
-			box_being_pushed = null
-			box_can_be_pushed = true
-	
-	
 func move_tween(dir):
 	tween.interpolate_property(self, "position",
 		position, position + inputs[dir] * tile_size,
