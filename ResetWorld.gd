@@ -15,12 +15,14 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+#	get_parent().get_node("Player/PanelContainer/Time").text = "[b]" + str(time_left) + "[/b]"
+	get_parent().get_node("CanvasLayer/PanelContainer/Label").text = str(time_left)
+	pass
 
 
 func _on_ResetWorld_timeout():
-	var siblings = get_parent().get_children()
+	var siblings = get_parent().get_node("Level").get_children()
 	for sibling in siblings:
 		if sibling.has_method('global_reset'):
 			sibling.global_reset()

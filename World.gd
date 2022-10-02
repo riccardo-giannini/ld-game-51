@@ -21,5 +21,5 @@ func _unhandled_input(event):
 
 
 func _on_Player_won():
-	$
+	$CanvasLayer/VictoryDialog.popup_centered()
 	pass # Replace with function body.

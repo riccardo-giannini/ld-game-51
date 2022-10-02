@@ -28,8 +28,10 @@ func global_reset():
 	position = initial_position
 	print(ray.get_collider())
 
+signal won
+
 func win():
-	print('congratulations, you won')
+	emit_signal("won")
 
 func move(dir):
 	ray.cast_to = inputs[dir] * tile_size

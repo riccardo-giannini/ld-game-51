@@ -7,6 +7,7 @@
 extents = Vector2( 24, 24 )
 
 [node name="Player" type="Area2D"]
+position = Vector2( 29648, 6151 )
 z_index = 1
 script = ExtResource( 1 )
 
@@ -26,3 +27,14 @@ smoothing_speed = 10.0
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+margin_right = 122.0
+margin_bottom = 58.0
+window_title = "You won!"
+dialog_text = "You won!"
+
+[node name="VictoryPopUp" type="Popup" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+popup_exclusive = true
