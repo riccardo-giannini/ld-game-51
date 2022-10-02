@@ -26,7 +26,6 @@ onready var initial_position = position
 func global_reset():
 	tween.stop_all()
 	position = initial_position
-	print(ray.get_collider())
 
 signal won
 
@@ -37,7 +36,6 @@ func move(dir):
 	ray.cast_to = inputs[dir] * tile_size
 	ray.force_raycast_update()
 	var collider = ray.get_collider()
-	print(collider)
 	if collider != null:
 		if collider.has_method('being_pushed'):
 			collider.being_pushed(inputs[dir], tile_size)

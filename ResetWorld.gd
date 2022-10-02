@@ -13,10 +13,15 @@ extends Timer
 func _ready():
 	pass # Replace with function body.
 
+func _unhandled_input(event):
+	if event.is_action_pressed("player_reset"):
+		emit_signal("timeout")
+		start()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	get_parent().get_node("CanvasLayer/PanelContainer/Label").text = str(time_left)
+	get_parent().get_node("CanvasLayer/PanelContainer/Label").text = str(stepify(time_left, 0.01))
 	pass
 
 
