@@ -47,6 +47,7 @@ func move_tween(dir):
 		position, position + inputs[dir] * tile_size,
 		1.0/speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	tween.start()
+	get_parent().get_parent().get_node("Walk").play()
 
 onready var tween = $Tween
 

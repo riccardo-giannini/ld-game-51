@@ -34,6 +34,7 @@ func activate():
 		collapsibleNode.setButtonActive(+1)
 	if is_instance_valid(collapsibleNode2) && collapsibleNode2.has_method("setButtonActive"):
 		collapsibleNode2.setButtonActive(+1)
+	get_parent().get_parent().get_node("ButtonPressed").play()
 
 func deactivate():
 	sprite.texture = unpressed

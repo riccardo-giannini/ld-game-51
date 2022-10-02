@@ -8,6 +8,7 @@ var buttonNeeded = 0
 var buttonActive = 0
 
 func collapse():
+	get_parent().get_parent().get_node("OpenWall").play()
 	queue_free()
 
 # Called when the node enters the scene tree for the first time.

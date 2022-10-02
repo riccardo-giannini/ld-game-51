@@ -30,5 +30,5 @@ func _on_ResetWorld_timeout():
 	for sibling in siblings:
 		if sibling.has_method('global_reset'):
 			sibling.global_reset()
-		pass
+	get_parent().get_node("TimeReset").play()
 	pass # Replace with function body.

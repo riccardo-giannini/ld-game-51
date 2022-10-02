@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Wall.tscn" type="PackedScene" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://ResetWorld.tscn" type="PackedScene" id=9]
 [ext_resource path="res://CollapsibleWall.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World.gd" type="Script" id=11]
+[ext_resource path="res://asset/sfx/jump.wav" type="AudioStream" id=12]
+[ext_resource path="res://asset/sfx/powerUp.wav" type="AudioStream" id=13]
+[ext_resource path="res://asset/sfx/hitHurt.wav" type="AudioStream" id=14]
+[ext_resource path="res://asset/sfx/click.wav" type="AudioStream" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -131,12 +135,6 @@ position = Vector2( -240, -48 )
 [node name="BoxSpawner9" parent="Level" instance=ExtResource( 7 )]
 position = Vector2( 1360, 16 )
 
-[node name="BoxSpawner8" parent="Level" instance=ExtResource( 7 )]
-position = Vector2( -48, -304 )
-
-[node name="BoxSpawner7" parent="Level" instance=ExtResource( 7 )]
-position = Vector2( -624, 80 )
-
 [node name="BoxSpawner6" parent="Level" instance=ExtResource( 7 )]
 position = Vector2( -176, 528 )
 
@@ -211,6 +209,18 @@ margin_right = 122.0
 margin_bottom = 58.0
 window_title = "You won!"
 dialog_text = "You won!"
+
+[node name="TimeReset" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+
+[node name="ButtonPressed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )
+
+[node name="OpenWall" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 15 )
 
 [connection signal="area_entered" from="Level/Player" to="Level/Player" method="_on_Player_area_entered"]
 [connection signal="won" from="Level/Player" to="." method="_on_Player_won"]
