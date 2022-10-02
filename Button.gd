@@ -1,6 +1,8 @@
 extends Area2D
 
 
+export (NodePath) var collapsibleNodePath
+var collapsibleNode
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -9,6 +11,9 @@ var unpressed = preload("res://asset/graphics-source_files/button_unpressed.png"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	collapsibleNode = get_node(collapsibleNodePath)
+	if is_instance_valid(collapsibleNode) && collapsibleNode.has_method("addButtonNeeded"):
+		collapsibleNode.addButtonNeeded()
 	pass # Replace with function body.
 
 onready var sprite = $Sprite
@@ -19,9 +24,14 @@ onready var sprite = $Sprite
 
 func activate():
 	sprite.texture = pressed
+	if is_instance_valid(collapsibleNode) && collapsibleNode.has_method("setButtonActive"):
+		collapsibleNode.setButtonActive(+1)
 
 func deactivate():
 	sprite.texture = unpressed
+	print(collapsibleNode)
+	if is_instance_valid(collapsibleNode) && collapsibleNode.has_method("setButtonActive"):
+		collapsibleNode.setButtonActive(-1)
 
 
 func _on_Button_body_entered(_body):
